@@ -5,7 +5,13 @@ function addTen(num){       //function to add 10 to a number
     return num + y;
 }
 
-document.write(addTen(x));
+var z = addTen(x);  //declare and assign global variable z to x + 10
+
+document.write(x + " plus 10 is " + z);     //display 3 + 10 is 13
+
+if (z <= 15){       //conditional statement evaluating if z is less than or equal to 15
+    document.write("<br>" + "If you are seeing this, that means x is less than or equal to 5!");
+}
 
 function multiplyTen(num){      //function to multiply 10 to a number
     return num * y;   
