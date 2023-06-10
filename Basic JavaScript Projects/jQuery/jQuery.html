@@ -6,20 +6,26 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     </head>
     <script>
-        $(document).ready(function(){
-            $("html").append(
+        $(document).ready(function(){   //when DOM is ready, execute function
+            $("html").append(   //append the <html> tag with the following:
                 "<body>\
                     <div id='container'>\
                         <div id='inner'>\
                             <h1>Basic jQuery</h1>\
-                            <p>Paragraph 1</p>\
-                            <p>Paragraph 2</p>\
-                            <p>Paragraph 3</p>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
                         </div>\
                     </div>\
-                </body>"\
+                </body>"
             );
-
+            $("#2").css({"color": "red"});  //targeting id='2', change font color to red
+            $("#3").click(function(){   //targeting id='3', upon click execute the function
+                $("h1").hide("fast");   //targeting <h1> element, hide it fast
+            });
+            $("#1").mouseover(function(){   //targeting id='1', upon mouseover execute function
+                $("#1").replaceWith("<p>This paragraph has been replaced!</p>");    //targeting id='1', replace the content with the new stuff
+            })
         });
     </script>
 
